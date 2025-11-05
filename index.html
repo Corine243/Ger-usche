@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Mein Soundboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #333;
+    }
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    button {
+      padding: 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #357ab7;
+    }
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Wähle einen Sound aus</h1>
+  <h2>Hintergrundgeräusche</h2>
+  <div class="button-grid">
+    <button onclick="document.getElementById('sound-schulhof').play()">Schulhof</button>
+    <button onclick="document.getElementById('sound-draussen').play()">Draußen</button>
+    <button onclick="document.getElementById('sound-klasse').play()">Schulklasse</button>
+  </div>
 
-    <button onclick="document.getElementById('sound1').play()">Sound 1 abspielen</button>
-    <audio id="sound1" src="https://github.com/Corine243/Ger-usche/raw/refs/heads/main/playing-cards-being-dealt-27024.mp3"></audio>
+  <audio id="sound-schulhof" src="DEIN_LINK_ZUM_SCHULHOF_SOUND.mp3"></audio>
+  <audio id="sound-draussen" src="DEIN_LINK_ZUM_DRAUSSEN_SOUND.mp3"></audio>
+  <audio id="sound-klasse" src="DEIN_LINK_ZUM_SCHULKLASSE_SOUND.mp3"></audio>
 
-    <button onclick="document.getElementById('sound2').play()">Sound 2 abspielen</button>
-    <audio id="sound2" src="LINK_ZU_DEINER_MP3_2.mp3"></audio>
+  <h2>Geräusche</h2>
+  <div class="button-grid">
+    <button onclick="document.getElementById('sound1').play()">Geräusch 1</button>
+    <button onclick="document.getElementById('sound2').play()">Geräusch 2</button>
+    <button onclick="document.getElementById('sound3').play()">Geräusch 3</button>
+    <button onclick="document.getElementById('sound4').play()">Geräusch 4</button>
+    <button onclick="document.getElementById('sound5').play()">Geräusch 5</button>
+    <button onclick="document.getElementById('sound6').play()">Geräusch 6</button>
+  </div>
 
-    <!-- Weitere Buttons und Audios nach dem gleichen Muster -->
+  <audio id="sound1" src=""></audio>
+  <audio id="sound2" src=""></audio>
+  <audio id="sound3" src=""></audio>
+  <audio id="sound4" src=""></audio>
+  <audio id="sound5" src=""></audio>
+  <audio id="sound6" src=""></audio>
 
 </body>
 </html>
-
